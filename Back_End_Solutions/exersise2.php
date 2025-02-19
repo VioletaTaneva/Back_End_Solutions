@@ -1,11 +1,9 @@
-
-
 <?php
-	$text = 'Test 123...';
-	$text_2 = 'Test 456';
-	$text_3='test';
-	$first_sentence = 'Building castles in the sky and in the sand';
-	$animal = 'Platypus';
+	$Name = 'Violeta';
+	$Last_name = 'Taneva';
+	$FullName = $Name . ' ' . $Last_name;
+	$Name_letter_count = strlen($Name);
+
 ?>
 
 <!DOCTYPE html>
@@ -20,14 +18,8 @@
 
 <body>
 
-	<h1>Debug errors</h1>
-
-	<ul>
-        <li>Debug this page so the script runs without error</li>
-        <li>Print all the variables in a unordered list below:</li>
-        <li><?php echo "$text $text_2 $text_3 $first_sentence $animal"; ?></li>
-
-    </ul>  
+	<h1> <?php echo $FullName; ?></h1>
+    <p>Character count: <?php echo $Name_letter_count; ?></p>
 
 </body>
 </html>
