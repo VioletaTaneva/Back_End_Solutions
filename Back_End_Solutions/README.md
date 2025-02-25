@@ -2,5 +2,3 @@
 Homework for back end.
 
 
-## Student repositories
-Violeta Taneva
