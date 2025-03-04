@@ -46,6 +46,7 @@
 <body>
 
     <ul class="navbar">
+        <p>Doesnt work rn i need to fix it. also wahts the proper php way of  nav calling</p>
         <li><a href="exercise1.php">Exercise 1</a></li>
         <li><a href="exercise2.php">Exercise 2</a></li>
         <li><a href="exercise3.php">Exercise 3</a></li>
