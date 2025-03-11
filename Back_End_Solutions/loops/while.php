@@ -11,6 +11,7 @@ while ($index < count($numbers)) { //we use < instead of = because array 100 = 1
         echo $number . " ";
     }
     ++$index; //++$index is better and faster then $index++
+    
 }   //watch out where you put your index :))))))))))
 
 ?>

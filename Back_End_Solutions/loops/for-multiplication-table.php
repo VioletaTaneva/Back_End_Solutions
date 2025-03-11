@@ -1,27 +1,18 @@
 <?php
 /*
-$numbers = range(1, 10); 
+$numbers = range(1, 10);
 
-$i = 0; //number being multiplied aka the 2 in 2*4
-
-while ($i < count($numbers)) {
-    $m = 0; //number being multiplied by aka the 4 in 2*4
-
-    while ($m < count($numbers)) {
-        echo $numbers[$i] . " * " . $numbers[$m] . " = " . ($numbers[$i] * $numbers[$m] . " ; ");
-        $m++;
-    };
-
+for ($i = 0; $i < count($numbers); $i++) { // Outer loop (number being multiplied)
+    for ($m = 0; $m < count($numbers); $m++) { // Inner loop (multiplier)
+        echo $numbers[$i] . " * " . $numbers[$m] . " = " . ($numbers[$i] * $numbers[$m]) . " ; ";
+    }
+    
     echo "<br>";
-
-    $i++;
 }
 
-// Saving the code in case I fuck it up at the table, cause i know it works
+// making the logic for refrence
 */
 ?>
-
-// Did my best
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,10 +33,8 @@ while ($i < count($numbers)) {
                 <th></th> <!-- Header cell that's empty -->
             <?php
                 $numbers = range(1, 10);
-                $i = 0;
-                while ($i < count($numbers)) {
+                for ($i = 0; $i < count($numbers); $i++) { 
                     echo "<th>" . $numbers[$i] . "</th>"; // Print numbers 1-10 in the header
-                    $i++;
                 }
             ?>
             </tr>
@@ -53,27 +42,22 @@ while ($i < count($numbers)) {
         <tbody>
             <?php
             // Print the multiplication table body
-            $i = 0;
-            while ($i < count($numbers)) {
+            for ($i = 0; $i < count($numbers); $i++) { 
                 echo "<tr>"; // Start a new row for each number (1 to 10)
                 echo "<th>" . $numbers[$i] . "</th>"; // First column for the row number (e.g., 1, 2, 3,...)
 
-                $m = 0; // multiply "function"
-                while ($m < count($numbers)) {
+                for ($m = 0; $m < count($numbers); $m++) { 
                     $result = $numbers[$i] * $numbers[$m];
                     
-                    //green evens
+                    // green evens
                     if ($result % 2 == 0) {
                         echo "<td class ='even'>" . $result . "</td>"; // Add class 'even' for even results
                     } else {
                         echo "<td>" . $result . "</td>"; // Regular cell for odd results
                     }
-
-                    $m++;
                 }
 
                 echo "</tr>"; // end the current row
-                $i++;
             }
             ?>
         </tbody>
